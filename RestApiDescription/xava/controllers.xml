@@ -1,0 +1,37 @@
+<?xml version = "1.0" encoding = "ISO-8859-1"?>
+
+<!DOCTYPE controllers SYSTEM "dtds/controllers.dtd">
+
+<controllers>
+
+	<controller name="ApiDescription">
+	    <extends controller="Typical"/> <!-- In order to have the standard actions -->
+	    
+	    <action name="createApidescription" 
+	    	mode="detail"
+	        class="de.holmarku.restapidescription.actions.CreateApiDescriptionAction"
+	        available-on-new="false"
+	        />
+	    <!-- mode="detail" : Only in detail mode -->
+	    
+	</controller>
+    
+    <!-- Environment variable:
+    <env-var name="RestApiDescription_DEFAULT_YEAR" value="2015"/> 
+    -->
+    
+    <!-- Session object:
+    <object name="RestApiDescription_activeYear" class="java.lang.Integer" value="2015" 
+    	    scope="global"/>    
+    -->
+    
+    <!-- Controller:
+    <controller name="Teacher">
+    	<extends controller="Typical"/>
+    	<action name="new" icon="library-plus" keystroke="Control N"
+        	class="actions.CreateTeacher">
+    	</action>
+	</controller>    
+    -->
+    
+</controllers>
