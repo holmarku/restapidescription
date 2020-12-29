@@ -23,7 +23,7 @@ public class ApiSchema {
     private String name;
     
     @ElementCollection
-    @ListProperties("apiField.fieldId, apiField.name, ciField")
+    @ListProperties("apiField.fieldId, apiField.name, paramIn, requiredFlag, ciField")
     private Collection<SchemaElements> schemaElements;
 
 	public String getSchemaId() {

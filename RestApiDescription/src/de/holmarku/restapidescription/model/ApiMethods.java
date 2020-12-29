@@ -30,16 +30,19 @@ public class ApiMethods {
     @Column(length=50)  // The column length is used at the UI level and the DB level
     @Required  // A validation error will be shown if the name property is left empty
     private String methodOperation;
-	
+    
+    @Column(length=50)  // The column length is used at the UI level and the DB level
+    private String methodTag;
+    
     @ElementCollection
-    @ListProperties("apiSchema.schemaId, apiSchema.name, apiField.fieldId, apiField.name, paramIn, requiredFlag, ciField")
+    @ListProperties("apiField.fieldId, apiField.name, paramIn, requiredFlag, ciField")
     private Collection<ApiElements> parameterElements; 
     
     @Column(length=50)  // The column length is used at the UI level and the DB level
     private String requestBodyDescription;
     
     @ElementCollection
-    @ListProperties("apiSchema.schemaId, apiSchema.name, apiField.fieldId, apiField.name, requiredFlag, ciField")
+    @ListProperties("apiSchema.schemaId, apiSchema.name")
     private Collection<ApiElements> requestBodySchema;
     
     @ElementCollection
@@ -80,6 +83,14 @@ public class ApiMethods {
 
 	public Collection<ApiElements> getParameterElements() {
 		return parameterElements;
+	}
+
+	public String getMethodTag() {
+		return methodTag;
+	}
+
+	public void setMethodTag(String methodTag) {
+		this.methodTag = methodTag;
 	}
 
 	public void setParameterElements(Collection<ApiElements> parameterElements) {
