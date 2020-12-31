@@ -9,7 +9,7 @@ import org.hibernate.annotations.*;
 import org.openxava.annotations.*;
 
 @Entity
-public class ApiSchema {
+public class ApiSubSchema3 {
 	
 	@Id  // The number property is the key property. Keys are required by default
 	@Hidden // The property is not shown to the user. It's an internal identifier
@@ -23,8 +23,8 @@ public class ApiSchema {
     private String name;
     
     @ElementCollection
-    @ListProperties("apiSubSchema1.schemaId, apiSubSchema1.name, apiField.fieldId, apiField.name, paramIn, requiredFlag, ciField")
-    private Collection<SchemaElements> schemaElements;
+    @ListProperties("apiField.fieldId, apiField.name, paramIn, requiredFlag, ciField")
+    private Collection<SubSchemaElements3> subSchemaElements3;
 
 	public String getSchemaId() {
 		return schemaId;
@@ -42,13 +42,14 @@ public class ApiSchema {
 		this.name = name;
 	}
 
-	public Collection<SchemaElements> getSchemaElements() {
-		return schemaElements;
+	public Collection<SubSchemaElements3> getSubSchemaElements3() {
+		return subSchemaElements3;
 	}
 
-	public void setSchemaElements(Collection<SchemaElements> schemaElements) {
-		this.schemaElements = schemaElements;
+	public void setSubSchemaElements3(Collection<SubSchemaElements3> subSchemaElements3) {
+		this.subSchemaElements3 = subSchemaElements3;
 	}
+
  
     
 

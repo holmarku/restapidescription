@@ -22,7 +22,7 @@ public class ApiPath {
     
     //@ElementCollection
     //@ListProperties("methodId, methodEnum, methodOperation")
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     private ApiMethods apiMethods;
 
 	public String getApiPath() {

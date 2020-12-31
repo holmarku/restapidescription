@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>RestApiDescription</name>
+	<name>RestApiDescription-openxava</name>
 	<comment></comment>
 	<projects>
 		<project>OpenXava</project>

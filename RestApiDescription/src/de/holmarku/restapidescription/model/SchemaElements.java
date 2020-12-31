@@ -7,9 +7,12 @@ public class SchemaElements {
 	 
 	private String ciField;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = true)
+    @ManyToOne(fetch = FetchType.EAGER, optional = true)
     private ApiField apiField;
 
+    @ManyToOne(fetch = FetchType.EAGER, optional = true)
+    private ApiSubSchema1 apiSubSchema1;
+    
     @Enumerated(EnumType.STRING)
     @Column(length=6)  // The column length is used at the UI level and the DB level
     private ParamIn paramIn;
@@ -47,6 +50,14 @@ public class SchemaElements {
 
 	public void setRequiredFlag(Boolean requiredFlag) {
 		this.requiredFlag = requiredFlag;
+	}
+
+	public ApiSubSchema1 getApiSubSchema1() {
+		return apiSubSchema1;
+	}
+
+	public void setApiSubSchema1(ApiSubSchema1 apiSubSchema1) {
+		this.apiSubSchema1 = apiSubSchema1;
 	} 
     
 	

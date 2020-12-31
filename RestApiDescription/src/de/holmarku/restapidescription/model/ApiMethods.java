@@ -42,7 +42,7 @@ public class ApiMethods {
     private String requestBodyDescription;
     
     @ElementCollection
-    @ListProperties("apiSchema.schemaId, apiSchema.name")
+    @ListProperties("apiSchema.schemaId, apiSchema.name, paramIn")
     private Collection<ApiElements> requestBodySchema;
     
     @ElementCollection

@@ -5,6 +5,8 @@ public enum ParamIn {
 	query, 
 	header, 
 	path,
-	cookie    
+	cookie,
+	object,
+	array
     
 }

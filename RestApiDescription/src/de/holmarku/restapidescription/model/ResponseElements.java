@@ -17,7 +17,7 @@ public class ResponseElements {
     @Required  // A validation error will be shown if the name property is left empty
     private String responseDescription;
     
-    @ManyToOne(fetch = FetchType.LAZY, optional = true)
+    @ManyToOne(fetch = FetchType.EAGER, optional = true)
     private ApiSchema responseSchema;
 
 	public ResponseEnum getResponseEnum() {
